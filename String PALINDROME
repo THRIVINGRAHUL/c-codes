@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    system("cls");
+    printf("*** TO CHECK THE INPUT IS A PALINDROME OR NOT ***\n");
+    char arr[10], arr2[20];
+    int count;
+    printf("INPUT :: ");
+    scanf("%s", arr);
+    strcpy(arr2, arr);
+    // printf("%s",arr2);
+    strrev(arr);
+    int a = strcmpi(arr2, arr); //    "strcmp" is a case senstive where "strcmpi" is not a case senstive ..
+
+    if (a == 0)
+    {
+        printf("\"%s\" is a PALINDROME!!", arr2);
+    }
+    else
+    {
+        printf("\"%s\" is not a PALINDROME!!", arr2);
+    }
+    return 0;
+} 
